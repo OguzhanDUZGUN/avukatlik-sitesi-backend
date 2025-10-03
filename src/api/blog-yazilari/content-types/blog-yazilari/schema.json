@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_yazilaris",
+  "info": {
+    "singularName": "blog-yazilari",
+    "pluralName": "blog-yazilaris",
+    "displayName": "blog-yazilari"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "baslik": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "baslik",
+      "required": true
+    },
+    "icerik": {
+      "type": "blocks",
+      "required": true
+    },
+    "ozet": {
+      "type": "text",
+      "maxLength": 200
+    },
+    "kategori": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "aile-hukuku",
+        "ceza-hukuku",
+        "is-hukuku",
+        "gayrimenkul-hukuku",
+        "ticaret-hukuku",
+        "miras-hukuku",
+        "diger"
+      ]
+    },
+    "kapakFotografi": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "yayinTarihi": {
+      "type": "date",
+      "required": true,
+      "default": "2025-09-20"
+    },
+    "yazar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::avukatlar.avukatlar"
+    },
+    "metaAciklama": {
+      "type": "text"
+    },
+    "anahtarKelimeler": {
+      "type": "json"
+    }
+  }
+}

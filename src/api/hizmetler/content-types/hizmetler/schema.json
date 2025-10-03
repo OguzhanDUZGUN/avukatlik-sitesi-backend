@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hizmetlers",
+  "info": {
+    "singularName": "hizmetler",
+    "pluralName": "hizmetlers",
+    "displayName": "hizmetler"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "baslik": {
+      "type": "string"
+    },
+    "aciklama": {
+      "type": "blocks"
+    }
+  }
+}

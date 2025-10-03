@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "uzmanlik_alanlaris",
+  "info": {
+    "singularName": "uzmanlik-alanlari",
+    "pluralName": "uzmanlik-alanlaris",
+    "displayName": "Uzmanlık Alanları"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "baslik": {
+      "type": "string"
+    },
+    "aciklama": {
+      "type": "blocks"
+    },
+    "gorsel": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "avukatlars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::avukatlar.avukatlar",
+      "mappedBy": "uzmanlik_alanlaris"
+    }
+  }
+}

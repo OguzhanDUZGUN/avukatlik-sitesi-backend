@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avukatlars",
+  "info": {
+    "singularName": "avukatlar",
+    "pluralName": "avukatlars",
+    "displayName": "avukatlar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "adSoyad": {
+      "type": "string"
+    },
+    "fotograf": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "biyografi": {
+      "type": "blocks"
+    },
+    "uzmanlik_alanlaris": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::uzmanlik-alanlari.uzmanlik-alanlari",
+      "inversedBy": "avukatlars"
+    },
+    "deneyimYili": {
+      "type": "integer"
+    },
+    "telefon": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "hizmetVerdigiYerler": {
+      "type": "json"
+    },
+    "metaAciklama": {
+      "type": "string"
+    },
+    "metaKeywords": {
+      "type": "string"
+    }
+  }
+}
