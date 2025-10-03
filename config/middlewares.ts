@@ -15,7 +15,8 @@ module.exports = [
         'http://localhost:3000',
         'http://localhost:1337',
         'https://avukatlik-sitesi.vercel.app',
-        'https://avukatlik-sitesi-o6oq8xwqq-oguzhan-duzguns-projects.vercel.app'
+        'https://avukatlik-sitesi-o6oq8xwqq-oguzhan-duzguns-projects.vercel.app',
+        'https://*.vercel.app'
       ]
     }
   },
